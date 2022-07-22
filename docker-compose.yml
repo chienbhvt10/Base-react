@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  my-base: 
+    build: 
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: my-container-2
+    env_file: ./.env
+    command: yarn start
+    ports:
+      - "3000:3000"
